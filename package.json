@@ -11,7 +11,7 @@
     "shell": "npm run build && firebase functions:shell",
     "deploy": "firebase deploy --only functions,hosting",
     "logs": "firebase functions:log",
-    "ci": "yarn install && yarn build && yarn firebase deploy --only functions:nextjsFunc"
+    "ci": "yarn install && yarn build && yarn firebase deploy --only functions:nextjsFunc --token '$FIREBASE_TOKEN'"
   },
   "dependencies": {
     "firebase-admin": "^9.4.2",
