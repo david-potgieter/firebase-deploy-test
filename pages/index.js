@@ -13,7 +13,7 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>I am Firebase</h1>
-        <p>(Live)</p>
+        <p>(Prod)</p>
       </main>
     </div>
   );
