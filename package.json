@@ -4,14 +4,14 @@
   "description": "Host Next.js SSR app on Firebase Cloud Functions with Firebase Hosting redirects.",
   "main": "firebaseFunctions.js",
   "scripts": {
-    "dev": "next src/",
-    "build": "next build src/",
-    "start": "next start src/",
+    "dev": "next src",
+    "build": "next build src",
+    "start": "next start src",
     "serve": "npm run build && firebase emulators:start --only functions,hosting",
     "shell": "npm run build && firebase functions:shell",
     "deploy": "firebase deploy --only functions,hosting",
     "logs": "firebase functions:log",
-    "ci": "yarn install && yarn build"
+    "ci": "yarn install && yarn build && firebase deploy --only hosting,functions:nextjsFunc --token '$FIREBASE_TOKEN'"
   },
   "dependencies": {
     "firebase-admin": "^9.4.2",
